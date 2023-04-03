@@ -18,6 +18,9 @@ fi
 # This is set as a (temporary) solution for pip 21.2 and https://github.com/pypa/pip/issues/10151
 export _PIP_LOCATIONS_NO_WARN_ON_MISMATCH=1
 
+# Silence warning about outdated pip version
+export PIP_DISABLE_PIP_VERSION_CHECK=1
+
 # Bootstrap and install the Python requirements from wheels.
 # Minimal packaging for the buildpack includes pip and setuptools wheels.
 REQUIREMENTS_PATH="${BUILDPACK_PATH}/requirements.txt"
