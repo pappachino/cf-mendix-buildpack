@@ -6,15 +6,6 @@ BUILDPACK_PATH=$(dirname "$0")/..
 BUILD_PATH=$1
 CACHE_PATH=$2
 
-# Install python if stack is cflinuxfs4 so its available during staging
-if [ "$CF_STACK" == "cflinuxfs4" ]; then
-  echo " ---> Detected cflinuxfs4 without built-in python-dev..."
-
-  PYTHON_DIR="/tmp/python"
-  mkdir -p "${PYTHON_DIR}"
-  source "$BUILDPACK_PATH/bin/install-python" "$PYTHON_DIR" "$BUILDPACK_PATH"
-fi
-
 # This is set as a (temporary) solution for pip 21.2 and https://github.com/pypa/pip/issues/10151
 export _PIP_LOCATIONS_NO_WARN_ON_MISMATCH=1
 
