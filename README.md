@@ -584,7 +584,7 @@ To enable New Relic, simply bind a New Relic service to this app and settings wi
 
 #### Set up Splunk integration
 
-To collect Mendix Runtime logs to [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html), 
+To collect Mendix Runtime logs to [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html),
 [Fluent Bit](https://docs.fluentbit.io/manual/) is used.
 
 To enable Splunk integration for a Mendix application, following environment variables should be configured.

@@ -6,9 +6,6 @@ BUILDPACK_PATH=$(dirname "$0")/..
 BUILD_PATH=$1
 CACHE_PATH=$2
 
-# This is set as a (temporary) solution for pip 21.2 and https://github.com/pypa/pip/issues/10151
-export _PIP_LOCATIONS_NO_WARN_ON_MISMATCH=1
-
 # Silence warning about outdated pip version
 export PIP_DISABLE_PIP_VERSION_CHECK=1
 
